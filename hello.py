@@ -1,7 +1,6 @@
 import requests
 from json2html import *
 import pdfkit
-pdfkit.from_string('my_testpdf ABC','testpdf.pdf')
 
 r = requests.get("https://reqres.in/api/users?page=2")
 response_val = dict(r.json())
@@ -19,4 +18,4 @@ data3 = data2.replace("&quot;", '"')
 file1 = open("index.html", "w")
 file1.write(data3)
 
-pdfkit.from_string(data3,'testpdf.pdf')
+pdfkit.from_file('index.html', 'testpdf.pdf')
