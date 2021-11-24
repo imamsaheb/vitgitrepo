@@ -1,6 +1,7 @@
 import requests
 from json2html import *
 import pdfkit
+import os
 
 r = requests.get("https://reqres.in/api/users?page=2")
 response_val = dict(r.json())
@@ -17,4 +18,5 @@ data2 = data1.replace("&gt;", ">")
 data3 = data2.replace("&quot;", '"')
 file1 = open("index.html", "w")
 file1.write(data3)
-pdfkit.from_file('index.html', 'testpdf.pdf')
+#pdfkit.from_file('index.html', 'testpdf.pdf')
+os.system('wkhtmltopdf index.html testpdf.pdf')
