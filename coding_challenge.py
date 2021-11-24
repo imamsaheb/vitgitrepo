@@ -19,6 +19,7 @@ class challenge():
         val = response_val.get('data')
         open_tag = "<"
         closed_tag = ">"
+        val1 = json2html.convert(json=val)
         for ele in val:
             avatar = ele['avatar']
             ele['avatar'] = open_tag + 'img src="' + avatar + '"' + closed_tag
@@ -29,7 +30,6 @@ class challenge():
         data3 = data2.replace("&quot;", '"')
         file1 = open("users.html", "w")
         file1.write(data3)
-        val1 = str(val)
         pdfkit.from_string(val1, 'users_pdf.pdf')
 
 obj = challenge()
