@@ -23,9 +23,9 @@ class challenge():
         data1 = html_data.replace("&lt;", "<")
         data2 = data1.replace("&gt;", ">")
         data3 = data2.replace("&quot;", '"')
-        file1 = open("index.html", "w")
+        file1 = open("users.html", "w")
         file1.write(data3)
-        pdfkit.from_file('index.html', 'testpdf.pdf')
+        pdfkit.from_file('users.html', 'users_pdf.pdf')
 
 obj = challenge()
 obj.fetch_users_generate_report()
