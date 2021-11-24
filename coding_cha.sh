@@ -1,3 +1,4 @@
+cd $WORKSPACE/$BUILD_NUMBER
 python3 -m unittest unit_coding_challenge.py
 python3 coding_challenge.py
 mv users.html users_$BUILD_NUMBER.html
