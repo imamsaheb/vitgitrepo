@@ -9,6 +9,10 @@ class challenge():
     def __init__(self):
         pass
 
+    def unit_test(self, url):
+        r = requests.get(url)
+        return r.status_code
+    
     def fetch_users_generate_report(self):
         r = requests.get("https://reqres.in/api/users?page=2")
         response_val = dict(r.json())
