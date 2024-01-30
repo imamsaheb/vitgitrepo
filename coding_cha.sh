@@ -1,5 +1,4 @@
 cd $WORKSPACE/$BUILD_NUMBER
-echo "hello world"
 python3 -m unittest unit_coding_challenge.py
 python3 coding_challenge.py
 mv users.html users_$BUILD_NUMBER.html
