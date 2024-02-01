@@ -1,7 +1,6 @@
 # vitgitrepo
 
 tesifdgfff
-rerere
 
 
 
